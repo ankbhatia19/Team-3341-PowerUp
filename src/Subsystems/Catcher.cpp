@@ -67,8 +67,8 @@ void Catcher::moveTogether(double speed, Direction catchDirection)
 	}
 	if(catchDirection == out)
 	{
-		left->Set(ControlMode::PercentOutput, -speed);
-		right->Set(ControlMode::PercentOutput, speed);
+		catcherLeft->Set(ControlMode::PercentOutput, -speed);
+		catcherRight->Set(ControlMode::PercentOutput, speed);
 	}
 }
 
@@ -76,11 +76,11 @@ void Catcher::moveLeft(double speed, Direction catchDirection)
 {
 	if (catchDirection == in)
 	{
-		left->Set(ControlMode::PercentOutput, speed);
+		catcherLeft->Set(ControlMode::PercentOutput, speed);
 	}
 	else if (catchDirection == out)
 	{
-		left->Set(ControlMode::PercentOutput, -speed);
+		catcherLeft->Set(ControlMode::PercentOutput, -speed);
 	}
 }
 
@@ -88,11 +88,11 @@ void Catcher::moveRight(double speed, Direction catchDirection)
 {
 	if (catchDirection == in)
 	{
-		right->Set(ControlMode::PercentOutput, -speed);
+		catcherRight->Set(ControlMode::PercentOutput, -speed);
 	}
 	else if (catchDirection == out)
 	{
-		right->Set(ControlMode::PercentOutput, speed);
+		catcherRight->Set(ControlMode::PercentOutput, speed);
 	}
 }
 
